@@ -16,7 +16,9 @@
     
 const inputRef = document.querySelector('#validation-input');
 
-const inputBlur = (event) => {
+
+
+const onInputBlur = (event) => {
   const { dadaset, value } = event.target;
   const requiredLength = Number(dadaset.length);
   if (requiredLength === value.length) {
@@ -27,3 +29,5 @@ const inputBlur = (event) => {
     event.target.classList.remove('valid');
   }
 }
+
+inputRef.addEventListener = ('blur', onInputBlur);
